@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue-day10</title>
+  <link rel="stylesheet" href="./stylesheets/css/Vue-day10.min.css">
+</head>
+
+<body>
+  <div id="app">
+    <section>
+      <div class="container">
+        <div class="title">
+          <div class="description">
+            <div v-on:click="number++">{{number}}</div>
+          </div>
+          <div class="description">
+            <div v-on:click="obj.num++">{{obj.num}}</div>
+          </div>
+          <div class="description">
+            <div v-for="(item,index) in objList" @click="objListHandler(index)">{{item.num}}</div>
+          </div>
+          <div class="description">
+            <div v-for="(item,index) in numberList" @click="numberListHandler(index)">{{item}}</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js'></script>
+  <script src="./javascript/Vue-day10.js"></script>
+</body>
+
+</html>

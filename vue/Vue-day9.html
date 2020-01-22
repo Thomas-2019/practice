@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue-day9</title>
+  <link rel="stylesheet" href="./stylesheets/css/Vue-day9.min.css">
+</head>
+
+<body>
+  <div id="app">
+    <section>
+      <div class="container">
+        <div class="title">
+          <img src="./image/vue.png" alt="img" style="width:100%;display: block;">
+          <h1>Vue.js!大家一起喀全家餐</h1>
+          <div class="description">
+            <a v-if="index > 0" class="arrow left" @click="changeIndex(-1)"></a>
+            <transition mode="out-in" appear @before-enter="beforeEnterHendler" @enter="enterHendler"
+                        @after-enter="afterEnterHendler" @before-leave="beforeLeaveHendler" @leave="LeaveHendler"
+                        @after-leave="afterLeaveHendler">
+              <div class="menuItem white" v-for="(item,i) in menu" v-if="index===i" :key="item.title"
+                   style="transform:scale3d(1.5,1.5,1)">
+                <span class="number">{{ i+1 }}</span>
+                <span class="type">{{ item.type }}</span>
+                <a class="title" target="vue-iron" href="">{{ item.title }}</a>
+              </div>
+            </transition>
+            <a v-if="index < total-1" class="arrow right" @click="changeIndex(1)">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js'></script>
+  <script src="./javascript/Vue-day9.js"></script>
+</body>
+
+</html>

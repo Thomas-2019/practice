@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue-day8</title>
+  <link rel="stylesheet" href="./stylesheets/css/Vue-day8.min.css">
+</head>
+
+<body>
+  <div id="app">
+    <section>
+      <div class="container">
+        <div class="title">
+          <div class="input" style="font-size: 0px;">
+            <select v-model="input.type">
+              <option :value="null">請選擇</option>
+              <option v-for="item in typeList.sort">{{item}}</option>
+            </select>
+            <select style="width:720px" v-model="input.title">
+              <option :value="null">請選擇</option>
+              <option v-for="item in titleList.sort">{{item}}</option>
+            </select>
+          </div>
+
+          <div class="menu">
+            <div class="menuItem" v-if="content">
+              <span class="number">{{content.index+1}}</span>
+              <a :href="content.link" target="vue-iron" class="title">{{content.link}}</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js'></script>
+  <script src="./javascript/Vue-day8.js"></script>
+</body>
+
+</html>

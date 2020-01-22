@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue-day5</title>
+  <link rel="stylesheet" href="./stylesheets/css/Vue-day5.min.css">
+</head>
+
+<body>
+  <div id="app">
+    <section>
+      <div class="container">
+        <div class="title">
+          <div class="input">
+            {{ name }}，
+            {{ sex }}性，
+            年齡為: {{ age }}，
+            <br />
+            {{favor.length ? '喜歡':''}}{{ favor.join('、') }}，
+            {{ member ? '己' : '未' }}成為頻道會員。
+          </div>
+          <div class="menu">
+            <table>
+              <tr>
+                <td class="title">姓名：</td>
+                <td>
+                  <input type="text" value="Thomas" v-model='name'></td>
+              </tr>
+              <tr>
+                <td class="title">性別：</td>
+                <td>
+                  <input type="radio" name="sex" value="男" v-model="sex" checked>男
+                  <input type="radio" name="sex" value="女" v-model="sex">女
+                </td>
+              </tr>
+              <tr>
+                <td class="title">年齡：</td>
+                <td>
+                  <select class="title" v-model="age">
+                    <option>20歲以下</option>
+                    <option>20歲~30歲</option>
+                    <option>30歲~40歲</option>
+                    <option>40歲以上</option>
+                  </select>
+                </td>
+              </tr>
+              <tr>
+                <td class="title">興趣：</td>
+                <td>
+                  <input type="checkbox" name="favor" value="打扣" v-model="favor">打扣
+                  <input type="checkbox" name="favor" value="電玩" v-model="favor">電玩
+                  <input type="checkbox" name="favor" value="遊日本" v-model="favor">遊日本
+                </td>
+              </tr>
+              <tr>
+                <td class="title">會員：</td>
+                <td><input type="checkbox" v-model="member">加入</td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js'></script>
+  <script src="./javascript/Vue-day5.js"></script>
+</body>
+
+</html>

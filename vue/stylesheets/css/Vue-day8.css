@@ -1,0 +1,211 @@
+@charset "UTF-8";
+html,
+body,
+#app {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+html {
+  color: #34495e;
+  background-color: #41b883;
+  font-family: "微軟正黑體";
+  overflow: hidden;
+}
+
+#app {
+  position: absolute;
+  white-space: nowrap;
+}
+
+#app > .prev {
+  text-indent: -100%;
+  left: 0;
+}
+
+#app > .next {
+  text-indent: 100%;
+  right: 0;
+}
+
+section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: block;
+  margin: 0 auto;
+}
+
+h1,
+.input {
+  font-size: 30px;
+  color: #ffffff;
+  text-align: center;
+  background-color: #34495e;
+  padding: 10px 0;
+  border-radius: 10px;
+  margin: 25px 0;
+}
+
+.input > * {
+  font-size: 30px;
+  height: 100%;
+  outline: 0;
+  border: 0;
+  margin: 0;
+  padding: 5px 2.5%;
+}
+
+.input > select {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 200px;
+}
+
+.input > input {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 720px;
+  border-top: 1px solid white;
+}
+
+.description {
+  position: relative;
+  text-align: center;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.description p {
+  font-size: 20px;
+  color: #ffffff;
+}
+
+.menu {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.menu td {
+  padding: 5px;
+}
+
+.menu td.title {
+  letter-spacing: 5px;
+}
+
+.menu:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.menuItem > .number {
+  width: 30px;
+  color: #ffffff;
+  background-color: #34495e;
+  border-radius: 10px 0 0 10px;
+  font-size: 30px;
+}
+
+.menuItem > .title {
+  display: inline-block;
+  line-height: 40px;
+  text-decoration: none;
+  color: #34495e;
+  font-weight: 800;
+  font-size: 30px;
+}
+
+.menuItem.white {
+  float: none;
+  width: auto;
+}
+
+.menuItem.white > .type {
+  margin: 0;
+  border-radius: 0;
+}
+
+.menuItem.white > .title {
+  background-color: #fff;
+  padding: 0 10px;
+  border-radius: 0 10px 10px 0;
+}
+
+.arrow {
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 100%;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.arrow.left {
+  left: 0;
+}
+
+.arrow.right {
+  right: 0;
+}
+
+.arrow:after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 0;
+  border-style: solid;
+}
+
+.arrow.left:after {
+  border-width: 10px 17.3px 10px 0;
+  border-color: transparent #34495e transparent transparent;
+}
+
+.arrow.right:after {
+  border-width: 10px 0 10px 17.3px;
+  border-color: transparent transparent transparent #34495e;
+}
+/*# sourceMappingURL=Vue-day8.css.map */

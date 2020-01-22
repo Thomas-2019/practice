@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue-day4</title>
+  <link rel="stylesheet" href="./stylesheets/css/Vue-day4.min.css">
+</head>
+
+<body>
+  <div id="app">
+    <section>
+      <div class="container">
+        <div class="title">
+          <img :src="src" alt="img" style="width:100%;display: block;">
+          <h1>{{title}}</h1>
+          <div class="description">
+            <!-- 如果不是第一天就秀出來 -->
+            <!-- index!=0 -->
+            <a class="arrow left" v-if="index > 0" @click="changeIndex(-1)"></a>
+            <div class="menuItem white" style="transform:scale3d(1.5,1.5,1)">
+              <span class="number">{{index+1}}</span>
+              <span class="type">{{today.type}}</span>
+              <a class="title" target="vue-iron" :href="today.link">{{today.title}}</a>
+            </div>
+            <!-- 如果不是最後一天就秀出來 -->
+            <!-- index!=total-1 -->
+            <a class="arrow right" v-if="index < total -1" @click="changeIndex(1)">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js'></script>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js'></script>
+  <script src="./javascript/Vue-day4.js"></script>
+</body>
+
+</html>

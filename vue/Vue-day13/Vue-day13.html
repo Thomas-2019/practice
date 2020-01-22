@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Vue-day13</title>
+    <link rel="stylesheet" href="../stylesheets/css/Vue-day13.min.css">
+</head>
+
+<body>
+    <div id="app">
+        <section v-if="loading">
+            Loading...
+        </section>
+        <section v-else>
+            <div class="container">
+                <div class="title">
+
+                    <div class="input">
+                        <input type="text" placeholder="會員名稱："  v-model.trim="input.name">
+                        <input type="email" placeholder="電子信箱："  v-model="input.email">
+                        <button @click="submitHandler">送出</button>
+                        <button @click="cancelHandler">清除</button>
+                    </div>
+
+                    <div class="menu">
+                        <div class="menuItem" v-for="(item,index) in contacts">
+                            <span class="number">{{item.id}}</span>
+                            <span class="type">{{item.name}}</span>
+                            <a :href="'mailto:'+item.mail" target="vue-iron" class="title">{{item.email}}</a>
+                            <span class="edit" @click="editHandler(index)">修改</span>
+                            <span class="delete" @click="deleteHandler(index)">刪除</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.1/axios.js'></script>
+    <script src="../javascript/Vue-day13.js"></script>
+</body>
+
+</html>

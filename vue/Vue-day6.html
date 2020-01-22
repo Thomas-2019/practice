@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Vue-day6</title>
+  <link rel="stylesheet" href="./stylesheets/css/Vue-day6.min.css">
+</head>
+
+<body>
+  <div id="app">
+    <section>
+      <div class="container">
+        <div class="title">
+          <div class="input" style="font-size: 0px;">
+            <select v-model="input.type">
+              <option>全部</option>
+              <option>主廚的話</option>
+              <option>餐具擺盤</option>
+              <option>開胃餐點</option>
+              <option>風味沙拉</option>
+              <option>總匯拼盤</option>
+              <option>用餐插曲</option>
+              <option>主廚推薦</option>
+            </select>
+            <input type="text" v-model.trim="input.title" v-on:keyup.13="enterHandler">
+          </div>
+          <div class="menu">
+            <div class="menuItem" v-for="(item,index) in menu">
+              <span class="number">{{index+1}}</span>
+              <span class="type">{{item.type}}</span>
+              <a :href="item.link" target="vue-iron" class="title">{{item.title}}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+
+
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.js'></script>
+  <script src="./javascript/Vue-day6.js"></script>
+</body>
+
+</html>
