@@ -74,8 +74,6 @@ input {
 
 .edit {
   background-color: red;
-  width: 50px;
-  height: 50px;
   padding: 5px;
   font-weight: bold;
   border-radius: 50%;
@@ -85,8 +83,6 @@ input {
 .delete {
   margin-left: 10px;
   background-color: green;
-  width: 50px;
-  height: 50px;
   font-weight: bold;
   padding: 5px;
   border-radius: 50%;
@@ -149,6 +145,7 @@ button {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-bottom: 10px;
 }
 
 .menuItem > .number {

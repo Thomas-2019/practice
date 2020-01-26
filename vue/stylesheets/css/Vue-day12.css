@@ -72,6 +72,26 @@ input {
   font-size: 30px;
 }
 
+.edit {
+  background-color: red;
+  width: 50px;
+  height: 50px;
+  padding: 5px;
+  font-weight: bold;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.delete {
+  margin-left: 10px;
+  background-color: green;
+  width: 50px;
+  height: 50px;
+  font-weight: bold;
+  padding: 5px;
+  border-radius: 50%;
+}
+
 button {
   border: 0px;
   background-color: #d35400;
