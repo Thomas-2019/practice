@@ -1,24 +1,40 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <TitleComponent :title="title" />
+    <InputCompoenet :text.sync="title" />
+    <img alt="Vue logo" src="./assets/logo.png" />
+    <HelloWorld msg="Welcome to Your Vue.js App" />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "./components/HelloWorld.vue";
+import TitleComponent from "./components/Title.vue";
+import InputCompoenet from "./components/InputCompoenet/index.vue"
 
 export default {
-  name: 'app',
+  name: "app",
+  data() {
+    return{
+      title: "thomas!"
+    }
+  },
   components: {
-    HelloWorld
-  }
-}
+    HelloWorld,
+    TitleComponent,
+    InputCompoenet
+  },
+  // methods:{
+  //   textHandler(val){
+  //     this.title=val
+  //   }
+  // }
+};
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
