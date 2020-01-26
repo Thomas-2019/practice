@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <div id="app">
+    <!-- <div id="app">
         <section v-if="loading">
             Loading...
         </section>
@@ -32,6 +32,33 @@
                             <span class="type">{{item.name}}</span>
                             <a :href="'mailto:'+item.mail" target="vue-iron" class="title">{{item.email}}</a>
                             <span class="edit" @click="editHandler(index)">修改</span>
+                            <span class="delete" @click="deleteHandler(index)">刪除</span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div> -->
+    <div id="app">
+        <section v-if="loading">loading...</section>
+        <section v-else>
+            <div class="container">
+                <div class="title">
+
+                    <div class="input">
+                        <input type="text" placeholder="會員名稱：" v-model.trim="input.name">
+                        <input type="email" placeholder="電子信箱：" v-model="input.email">
+                        <button @click="submitHandler">送出</button>
+                        <button @click="cancelHandler">清除</button>
+                    </div>
+
+                    <div class="menu">
+                        <div class="menuItem" v-for="(item,index) in contacts">
+                            <span class="number">{{item.id}}</span>
+                            <span class="type">{{item.name}}</span>
+                            <a :href="'mailto:'+item.email" target="vue-iron" class="title">{{item.email}}</a>
+                            <span class="edit" @click="editHandeler(index)">修改</span>
                             <span class="delete" @click="deleteHandler(index)">刪除</span>
                         </div>
                     </div>
