@@ -1,4 +1,4 @@
-# vue-day15
+# day15
 
 ## Project setup
 ```
