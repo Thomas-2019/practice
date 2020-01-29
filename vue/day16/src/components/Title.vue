@@ -10,13 +10,13 @@ export default {
   //   return {
   //     title: "Thomas!Hello World"
   //   };
-  // },//從內部傳資料:方法一
+  // },//從內部傳資料:方法1
   props:{
     title:{
       type:String,
       required:true
     }
-  }//從app.vue(外部)傳資料這裡接收需使用props:方法二
+  }//從app.vue(外部)傳資料這裡接收需使用props:方法2
 };
 </script>
 
