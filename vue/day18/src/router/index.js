@@ -46,7 +46,7 @@ const routes = [
         component: () =>
           import(/* webpackChunkName: "Youtube" */ "../views/Youtube.vue")
       }
-    ]
+    ] 
   }
 ];
 
